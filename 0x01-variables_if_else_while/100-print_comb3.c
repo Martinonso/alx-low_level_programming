@@ -39,7 +39,7 @@ int main(void)
 					putchar(' ');
 				}
 			}
-																			c++;
+			c++;
 		}
 		d++;
 	}
