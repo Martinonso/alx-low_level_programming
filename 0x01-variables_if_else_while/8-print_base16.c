@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - main block
  * Description: prints all single digit numbers of base 10
@@ -9,7 +8,6 @@
  */
 
 int main(void)
-
 {
 	char d = '0';
 
