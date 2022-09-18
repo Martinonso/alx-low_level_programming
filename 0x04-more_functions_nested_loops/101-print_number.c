@@ -19,7 +19,6 @@ void print_number(int n)
 	}
 	num = n;
 	num2 = num;
-	
 	if (num > 9)
 	{
 		while (num >= 10)
@@ -34,5 +33,5 @@ void print_number(int n)
 		_putchar((num2 / i) % 10 + '0');
 	}	
 	else
-	_putchar(num + '0');
+		_putchar(num + '0');
 
