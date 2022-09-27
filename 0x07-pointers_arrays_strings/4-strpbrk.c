@@ -19,7 +19,7 @@ char *_strpbrk(char *s, char *accept)
 		while (*(accept + j) != '\0')
 		{
 			if (*s == *(accept + j))
-																				flag = 1;
+				flag = 1;
 			j++;
 		}
 		j = 0;
