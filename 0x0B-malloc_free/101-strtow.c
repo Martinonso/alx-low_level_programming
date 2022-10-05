@@ -30,8 +30,9 @@ int wordcounter(char *str, int pos, char firstchar)
 		{
 			if (pos > 0 && pos == wordcount && firstchar > 0)
 				return (i);
-			for (charcount = 0; str[i + charcount + 1] != ' '; charcount++);
-				return (charcount);
+			for (charcount = 0; str[i + charcount + 1] != ' '; charcount++)
+				;
+			return (charcount);
 		}
 		if (str[i] == ' ')
 		flag = 0;
@@ -50,9 +51,10 @@ char **strtow(char *str)
 	int wc, wordlen, getfirstchar, len, i, j;
 	char **p;
 
-	for (len = 0; str[len]; len++);
-		if (str == NULL)
-			return (NULL);
+	for (len = 0; str[len]; len++)
+		;
+	if (str == NULL)
+		return (NULL);
 	wc = wordcounter(str, 0, 0);
 	if (len == 0 || wc == 0)
 		return (NULL);
@@ -61,7 +63,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0, wordlen = 0; i < wc; i++)
 	{
-/* Allocate memory for nested elements */
+		/* Allocate memory for nested elements */
 		wordlen = wordcounter(str, i + 1, 0);
 		if (i == 0 && str[i] != ' ')
 			wordlen++;
@@ -69,7 +71,7 @@ char **strtow(char *str)
 		if (p[i] == NULL)
 		{
 			for ( ; i >= 0; --i)
-			free(p[i]);
+				free(p[i]);
 			free(p);
 			return (NULL);
 		}
