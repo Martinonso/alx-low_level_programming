@@ -25,6 +25,7 @@ int _isnumber(char *s)
 	}
 	return (check);
 }
+
 /**
  * _callocX - reserves memory initialized to 0
  * @nmemb: # of bytes
@@ -44,6 +45,7 @@ char *_callocX(unsigned int nmemb)
 	p[i] = '\0';
 	return (p);
 }
+
 /**
  * main - multiplies inf numbers
  * @argc: # of cmd line args
@@ -54,8 +56,8 @@ char *_callocX(unsigned int nmemb)
 int main(int argc, char **argv)
 {
 	int i, j, l1, l2, lful, mul, add, ten, ten2, tl, zer = 0;
-
 	char *res;
+
 	if (argc != 3 || _isnumber(argv[1]) == 0 || _isnumber(argv[2]) == 0)
 		printf("Error\n"), exit(98);
 	if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
