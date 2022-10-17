@@ -19,6 +19,7 @@ void print_i(va_list list, char *s)
  * @list: arguement char
  * @sep: seperator
  */
+
 void print_c(va_list list, char *sep)
 {
 	printf("%s%c", sep, va_arg(list, int));
@@ -40,6 +41,7 @@ void print_s(va_list list, char *sep)
 		s = "(nil)";
 	printf("%s%s", sep, s);
 }
+
 /**
  * print_f - prints floats
  * @sep: float to print
@@ -69,6 +71,7 @@ void print_all(const char * const format, ...)
 		{"s", print_s},
 		{NULL, NULL}
 	};
+
 	va_start(list, format);
 	i = 0;
 	separator = "";
