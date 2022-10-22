@@ -24,32 +24,17 @@ list_t *add_node(list_t **head, const char *str)
 	return (new_node);
 }
 
-
-
 /**
- *
- *  * _strlen - returns length of string
- *
- *   * @s: character of string
- *
- *    * Return: length of string
- *
- *     */
-
-
+ * _strlen - returns length of string
+ * @s: character of string
+ * Return: length of string
+ */
 
 int _strlen(const char *s)
-
 {
+	int i;
 
-		int i;
-
-
-
-			while (s[i] != 0)
-
-						i++;
-
-				return (i);
-
+	while (s[i] != 0)
+		i++;
+	return (i);
 }
