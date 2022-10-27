@@ -1,5 +1,7 @@
-#include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
 
 /**
  * find_listint_loop - finds address of starting node in looped linked list
