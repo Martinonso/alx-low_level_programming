@@ -28,6 +28,7 @@ int _pow_recursion(int x, int y)
 void print_binary(unsigned long int n)
 {
 	unsigned int res_pow = 0;
+	
 	int exp = 10;
 	int flag = 0;
 
