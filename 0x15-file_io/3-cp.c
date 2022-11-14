@@ -40,15 +40,13 @@ int main(int argc, char *argv[])
 	{
 		check_in = read(fd, buff, 1024);
 		if (check_in == -1)
-			dprintf(STDERR_FILENO,
-		"Error: Can't read from file %s\n", argv[1]),
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
 		exit(98);
 		if (check_in > 0)
 		{
 			check_out = write(fd_to, buff, check_in);
 			if (check_out == -1)
-				dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", argv[2]),
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 			exit(99);
 		}
 	}
